@@ -1,5 +1,5 @@
 
-package proyectojava.modelo;
+package hotelIlusion.modelo;
 
 import hotelilusion.Huesped;
 import java.sql.Connection;

@@ -5,17 +5,25 @@
  */
 package hotelilusion;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import hotelIlusion.modelo.Conexion;
+import hotelIlusion.modelo.HuespedData;
+
 /**
  *
- * @author agus
+ *  * @author agus
  */
 public class HotelIlusion {
 
     /**
      * @param args the command line arguments
+     * @throws java.text.ParseException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
+
+                }
     }
     
-}
