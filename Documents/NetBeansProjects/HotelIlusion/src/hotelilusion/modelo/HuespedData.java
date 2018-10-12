@@ -1,7 +1,6 @@
 
-package hotelIlusion.modelo;
+package hotelilusion.modelo;
 
-import hotelilusion.Huesped;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -15,7 +14,7 @@ import java.util.List;
 
 /**
  *
- * @author Noelia
+ * @author agus
  */
 public class HuespedData {
     private Connection connection = null;
@@ -32,15 +31,14 @@ public class HuespedData {
     public void guardarHuesped(Huesped huesped){
         try {
             
-            String sql = "INSERT INTO huesped (id_huesped, nombre_apellido, numero_documento, direccion, telefono, email) VALUES ( ? , ? , ? , ? , ? , ? );";
+            String sql = "INSERT INTO huesped (nombre_apellido, numero_documento, dirección, telefono, email) VALUES ( ? , ? , ? , ? , ? );";
 
             try (PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                statement.setInt(1, huesped.getId_huesped());
-                statement.setString(2, huesped.getNombre_apellido());
-                statement.setInt(3, huesped.getNumero_documento());
-                statement.setString(4, huesped.getDireccion());
-                statement.setInt(5, huesped.getTelefono());
-                statement.setString(6, huesped.getEmail());
+                statement.setString(1, huesped.getNombre_apellido());
+                statement.setInt(2, huesped.getNumero_documento());
+                statement.setString(3, huesped.getDireccion());
+                statement.setInt(4, huesped.getTelefono());
+                statement.setString(5, huesped.getEmail());
                 
                 statement.executeUpdate();
                 
@@ -58,7 +56,7 @@ public class HuespedData {
         }
     }
     
-    public List<Huesped> obtenerHuspedes(){
+    public List<Huesped> obtenerHuespedes(){
         List<Huesped> huespedes = new ArrayList<Huesped>();
             
 
@@ -86,6 +84,10 @@ public class HuespedData {
         
         
         return huespedes;
+    }
+
+    public Object obtenerHuesped() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

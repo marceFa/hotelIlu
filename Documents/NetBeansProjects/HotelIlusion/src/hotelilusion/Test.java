@@ -6,7 +6,8 @@
 package hotelilusion;
 
 
-import hotelilusion.modelo.HuespedData;
+import hotelilusion.modelo.Huesped;
+import hotelIlusion.modelo.HuespedData;
 import java.text.ParseException;
 import java.time.LocalDate,
 
@@ -15,7 +16,7 @@ import java.time.LocalDate,
  * @author agus
  */
 
-public class HotelIlusion {
+public class Test {
     
     public static void main(String[] args){
         

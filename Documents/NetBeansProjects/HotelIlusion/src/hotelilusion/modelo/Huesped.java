@@ -1,4 +1,4 @@
-package hotelilusion;
+package hotelilusion.modelo;
 
 /**
  *

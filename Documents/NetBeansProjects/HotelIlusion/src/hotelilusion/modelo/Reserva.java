@@ -1,4 +1,4 @@
-package hotelIlusion.modelo;
+package hotelilusion.modelo;
 
 import java.time.LocalDate;
 

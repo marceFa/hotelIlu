@@ -7,8 +7,8 @@ package hotelilusion.modelo;
 
 /**
  *
- * @author Noelia
+ * @author agus
  */
-public class ResevaData {
+class tipo_habitacion {
     
 }

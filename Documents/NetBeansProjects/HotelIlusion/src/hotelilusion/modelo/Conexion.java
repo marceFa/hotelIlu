@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotelIlusion.modelo;
+package hotelilusion.modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
+//@ autor agus
 
 public class Conexion {
     private String url;
@@ -17,7 +19,7 @@ public class Conexion {
     
     private Connection conexion;
 
-    public Conexion (String url, String usuario, String password) throws ClassNotFoundexception, ClassNotFoundException {
+    public Conexion (String url, String usuario, String password) throws ClassNotFoundException, ClassNotFoundException {
         this.url = url;
         this.usuario = usuario;
         this.password = password;
@@ -30,7 +32,7 @@ public class Conexion {
         this.usuario = "root";
         this.password = "";
         
-        Class forName("org.mariadb.jdbc.Driver");
+        
     }
     
     public Connection getConexion() throws SQLException {

@@ -1,7 +1,7 @@
-package proyectojava.modelo;
+package hotelilusion.modelo;
 
-import hotelIlusion.modelo.Tipo_de_habitacion;
-import hotelIlusion.modelo.Conexion;
+import hotelilusion.modelo.Tipo_habitacion;
+import hotelilusion.modelo.Conexion;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -17,10 +17,10 @@ import java.util.List;
  *
  * @author Noelia
  */
-public class Tipo_de_habitacionData {
+public class Tipo_habitacionData {
     private Connection connection = null;
 
-    public Tipo_de_habitacionData(Conexion conexion) {
+    public Tipo_habitacionData(Conexion conexion) {
         try {
             connection = conexion.getConexion();
         } catch (SQLException ex) {
@@ -29,23 +29,22 @@ public class Tipo_de_habitacionData {
     }
     
     
-    public void guardarTipo_de_habitacion(Tipo_de_habitacion tipo_de_habitacion){
+    public void guardarTipo_habitacion(Tipo_habitacion tipo_habitacion){
         try {
             
-            String sql = "INSERT INTO tipo_de_habitacion (id_tipo_de_camas, simple, queen, kin_size) VALUES ( ? , ? , ? , ? );";
+            String sql = "INSERT INTO tipo_de_habitacion (id_habitacion, descripcion) VALUES ( ?, ?);";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, tipo_de_habitacion.getId_tipo_de_camas());
-            statement.setString(2, tipo_de_habitacion.getSimple());
-            statement.setString(3, tipo_de_habitacion.getQueen());
-            statement.setString(3, tipo_de_habitacion.getKin_size());
+            statement.setInt(1, tipo_habitacion.getId_tipoHabitacion());
+            statement.setString(2, tipo_habitacion.getDescripcion());
+            
             
             statement.executeUpdate();
             
             ResultSet rs = statement.getGeneratedKeys();
 
             if (rs.next()) {
-                tipo_de_habitacion.setId_tipo_de_camas(rs.getInt(1));
+                tipo_habitacion.setId_tipohabitacion(rs.getInt(1));
             } else {
                 System.out.println("No se pudo obtener el id_tipo_de_habitacion luego de insertar una tipo_de_habitacion");
             }
@@ -56,23 +55,21 @@ public class Tipo_de_habitacionData {
         }
     }
     
-    public List<Tipo_de_habitacion> obtenerTipo_de_habitacion(){
-        List<Tipo_de_habitacion> tipo_de_habitaciones = new ArrayList<Tipo_de_habitacion>();
+    public List<Tipo_habitacion> obtenerTipo_habitacion(){
+        List<Tipo_habitacion> tipo_habitaciones = new ArrayList<Tipo_habitacion>();
             
 
         try {
-            String sql = "SELECT * FROM tipo_de_habitacion;";
+            String sql = "SELECT * FROM tipo_habitacion;";
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
-            Tipo_de_habitacion tipo_de_habitacion;
+            Tipo_habitacion tipo_habitacion;
             while(resultSet.next()){
-                tipo_de_habitacion = new Tipo_de_habitacion();
-                tipo_de_habitacion.setId_tipo_de_camas(resultSet.getInt("id_tipo_de_camas"));
-                tipo_de_habitacion.setSimple(resultSet.getString("habitacion simple"));
-                tipo_de_habitacion.setQueen(resultSet.getString("habitacion Queen"));
-                tipo_de_habitacion.setKin_size(resultSet.getString("habitacion Kin_size"));
-
-                tipo_de_habitaciones.add(tipo_de_habitacion);
+                tipo_habitacion = new Tipo_habitacion();
+                tipo_habitacion.setId_tipoHabitacion(resultSet.getInt("id_tipo_habitacion"));
+                tipo_habitacion.setDescripcion(resultSet.getString("descripcion"));
+                
+                tipo_habitaciones.add((Tipo_habitacion) tipo_habitacion);
             }      
             statement.close();
         } catch (SQLException ex) {
@@ -80,7 +77,7 @@ public class Tipo_de_habitacionData {
         }
         
         
-        return tipo_de_habitaciones;
+        return tipo_habitaciones;
     }
     
 }

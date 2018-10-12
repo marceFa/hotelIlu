@@ -4,22 +4,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotelIlusion.modelo;
+package hotelilusion.modelo;
 
-import proyectojava.modelo.Habitacion;
-import hotelIlusion.modelo.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import proyectojava.modelo.Habitacion;
 
 /**
  *
- * @author Usuario
+ * @author agus
  */
 public class HabitacionData {
      private Connection connection = null;
@@ -38,26 +33,26 @@ public class HabitacionData {
     public void guardarHabitacion(Habitacion habitacion){
         try {
             
-            String sql = "INSERT INTO habitacion (piso, tipohabitacion, cant_de_camas, precio_diario) VALUES ( ? , ? , ? , ? );";
+            String sql = "INSERT INTO habitacion (numero, piso, caracteristicas,cant_personas,cant_camas, precio_diario, id_habitacion) VALUES ( ? , ? , ? , ?, ?, ?, ? );";
 
-            PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, habitacion.getPiso());
-            statement.setInt(2, habitacion.getCaracteristicas().getId_tipo_de_camas());
-            statement.setInt(3, habitacion.getCant_de_camas());
-            statement.setDouble(4, habitacion.getPrecio_diario());
-            
-            
-            
-            statement.executeUpdate();
-            
-            ResultSet rs = statement.getGeneratedKeys();
-
-            if (rs.next()) {
-                habitacion.setId_habitacion(rs.getInt(1));
-            } else {
-                System.out.println("No se pudo obtener el id luego de insertar un habitacion");
+            try (PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+                statement.setInt(1, habitacion.getNumero());
+                statement.setInt(2, habitacion.getPiso());
+                statement.setInt(3, habitacion.getCant_de_camas());
+                statement.setDouble(4, habitacion.getPrecio_diario());
+                
+                
+                
+                statement.executeUpdate();
+                
+                ResultSet rs = statement.getGeneratedKeys();
+                
+                if (rs.next()) {
+                    habitacion.setId_habitacion(rs.getInt(1));
+                } else {
+                    System.out.println("No se pudo obtener el id luego de insertar un habitacion");
+                }
             }
-            statement.close();
     
         } catch (SQLException ex) {
             System.out.println("Error al insertar un habitacion: " + ex.getMessage());

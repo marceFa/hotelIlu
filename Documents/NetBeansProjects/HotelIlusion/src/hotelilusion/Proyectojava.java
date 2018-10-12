@@ -7,7 +7,7 @@ package proyectojava.modelo;
 
 /**
  *
- * @author Noelia
+ * @author agus
  */
 public class Proyectojava {
 
