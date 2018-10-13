@@ -6,10 +6,11 @@
 
 
 
+import hotelilusion.modelo.Conexion;
 import hotelilusion.modelo.Huesped;
-import hotelIlusion.modelo.HuespedData;
+import hotelilusion.modelo.HuespedData;
 import java.text.ParseException;
-import java.time.LocalDate,
+import java.time.LocalDate;
 
 /**
  *
@@ -31,11 +32,11 @@ public class Test {
  //         huespedData.guardarHuesped(huesped1);
  //         System.out.println("El id del huesped es: " + huesped1.getId_huesped());
  
-        huespedData.obtenerHuesped().forEach(huesped -> {
+        huespedData.obtenerHuesped().forEach (huesped -> {
             System.out.println("Nombre_apellido: " + huesped.getNombre_apellido());
         });
         
-        } catch (Exception e) {
+        } catch (ClassNotFoundException e) {
             System.out.println("Error al instanciar la clase conexion: " + 
                     e.getMessage());
         }
