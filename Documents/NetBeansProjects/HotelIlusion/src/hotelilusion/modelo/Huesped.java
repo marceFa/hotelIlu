@@ -56,6 +56,10 @@ public class Huesped {
      public Huesped(){
         this.id_huesped = -1;
     }
+
+    public void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

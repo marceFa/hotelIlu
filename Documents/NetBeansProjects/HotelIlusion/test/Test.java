@@ -7,10 +7,7 @@
 
 
 import hotelilusion.modelo.Conexion;
-import hotelilusion.modelo.Huesped;
 import hotelilusion.modelo.HuespedData;
-import java.text.ParseException;
-import java.time.LocalDate;
 
 /**
  *
@@ -32,13 +29,23 @@ public class Test {
  //         huespedData.guardarHuesped(huesped1);
  //         System.out.println("El id del huesped es: " + huesped1.getId_huesped());
  
-        huespedData.obtenerHuesped().forEach (huesped -> {
+        huespedData.obtenerHuesped().forEach (huesped -> ) {
             System.out.println("Nombre_apellido: " + huesped.getNombre_apellido());
-        });
+            };
         
         } catch (ClassNotFoundException e) {
             System.out.println("Error al instanciar la clase conexion: " + 
                     e.getMessage());
+        }
+    }
+
+    private static class huesped {
+
+        private static String getNombre_apellido() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public huesped() {
         }
     }
     
