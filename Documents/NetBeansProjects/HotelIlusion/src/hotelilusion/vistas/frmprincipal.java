@@ -27,313 +27,108 @@ public class frmprincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textField1 = new java.awt.TextField();
-        jFrame1 = new javax.swing.JFrame();
-        jPanel1 = new javax.swing.JPanel();
-        jLabelhuesped = new javax.swing.JLabel();
-        txtnombre = new javax.swing.JTextField();
-        jLabelingreso = new javax.swing.JLabel();
-        jFormattedTextField1ingreso = new javax.swing.JFormattedTextField();
-        jLabelegreso = new javax.swing.JLabel();
-        jFormattedTextFieldegreso = new javax.swing.JFormattedTextField();
-        jLabelcant_personas = new javax.swing.JLabel();
-        jComboBox1cantidad = new javax.swing.JComboBox<>();
-        jLabelobservacion = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaobserv = new javax.swing.JTextArea();
-        jLabelcosto = new javax.swing.JLabel();
-        jFormattedTextFieldcosto = new javax.swing.JFormattedTextField();
-        jLabelid_hab = new javax.swing.JLabel();
-        jComboBoxhabit = new javax.swing.JComboBox<>();
-        jLabelid_reserva = new javax.swing.JLabel();
-        jButtonguardar = new javax.swing.JButton();
-        jButtonnueva = new javax.swing.JButton();
-        jButtoncancelar = new javax.swing.JButton();
-        jrdactiva = new javax.swing.JRadioButton();
-        jrdinactiva = new javax.swing.JRadioButton();
-        jrdcancelada = new javax.swing.JRadioButton();
-        jLabelreserva = new javax.swing.JLabel();
-
-        textField1.setText("textField1");
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        matteBorder1 = new javax.swing.border.MatteBorder(null);
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jRadioButtonMenuItem4 = new javax.swing.JRadioButtonMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jRadioButtonMenuItem5 = new javax.swing.JRadioButtonMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jRadioButtonMenuItem6 = new javax.swing.JRadioButtonMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu7 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.setForeground(new java.awt.Color(0, 51, 255));
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
 
-        jLabelhuesped.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelhuesped.setText("Huésped");
-        jLabelhuesped.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu1.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu1.setText("Ingresar");
 
-        txtnombre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        txtnombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
-
-        jLabelingreso.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelingreso.setText("Fecha Ingreso");
-        jLabelingreso.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jFormattedTextField1ingreso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
-        jFormattedTextField1ingreso.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.FULL))));
-        jFormattedTextField1ingreso.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("Acceso");
+        jRadioButtonMenuItem1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jRadioButtonMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField1ingresoActionPerformed(evt);
+                jRadioButtonMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu1.add(jRadioButtonMenuItem1);
 
-        jLabelegreso.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelegreso.setText("Fecha Egreso");
-        jLabelegreso.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.add(jMenu1);
 
-        jFormattedTextFieldegreso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
-        jFormattedTextFieldegreso.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.FULL))));
+        jMenu2.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu2.setText("Reserva");
 
-        jLabelcant_personas.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelcant_personas.setText("Cantidad de Personas");
-        jLabelcant_personas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jRadioButtonMenuItem4.setSelected(true);
+        jRadioButtonMenuItem4.setText("frmreserva");
+        jRadioButtonMenuItem4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jMenu2.add(jRadioButtonMenuItem4);
 
-        jComboBox1cantidad.setBackground(new java.awt.Color(51, 153, 255));
-        jComboBox1cantidad.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jComboBox1cantidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Persona", "2 Personas", "3 Personas", "4 Personas", "5 Personas", "6 Personas", "7 Personas", "8 Personas", "9 Personas", "10 Personas", "20 Personas", "50 Personas" }));
-        jComboBox1cantidad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 255)));
+        jMenuBar1.add(jMenu2);
 
-        jLabelobservacion.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelobservacion.setText("Observación");
-        jLabelobservacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu4.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu4.setText("Huésped");
 
-        jTextAreaobserv.setColumns(20);
-        jTextAreaobserv.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jTextAreaobserv.setRows(5);
-        jTextAreaobserv.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
-        jScrollPane1.setViewportView(jTextAreaobserv);
+        jRadioButtonMenuItem5.setSelected(true);
+        jRadioButtonMenuItem5.setText("frmhuésped");
+        jMenu4.add(jRadioButtonMenuItem5);
 
-        jLabelcosto.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelcosto.setText("Costo Alojamiento");
-        jLabelcosto.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenuBar1.add(jMenu4);
 
-        jFormattedTextFieldcosto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
-        jFormattedTextFieldcosto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat(""))));
+        jMenu5.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu5.setText("Habitación");
 
-        jLabelid_hab.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelid_hab.setText("Tipo Habitación");
-        jLabelid_hab.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jRadioButtonMenuItem6.setSelected(true);
+        jRadioButtonMenuItem6.setText("frmhabitacion");
+        jRadioButtonMenuItem6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jMenu5.add(jRadioButtonMenuItem6);
 
-        jComboBoxhabit.setBackground(new java.awt.Color(0, 102, 204));
-        jComboBoxhabit.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jComboBoxhabit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Simple", "Double", "Matrimonial", "Suite", "Presidencial", " " }));
-        jComboBoxhabit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
+        jMenuBar1.add(jMenu5);
 
-        jLabelid_reserva.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabelid_reserva.setText("Estado");
-        jLabelid_reserva.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu6.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu6.setText("Consultas");
+        jMenuBar1.add(jMenu6);
 
-        jButtonguardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButtonguardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\agus\\Downloads\\system_file_manager_wallet_22488.png")); // NOI18N
-        jButtonguardar.setText("Guardar");
-        jButtonguardar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
+        jMenu3.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu3.setText("Observaciones");
+        jMenuBar1.add(jMenu3);
 
-        jButtonnueva.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButtonnueva.setIcon(new javax.swing.ImageIcon("C:\\Users\\agus\\Downloads\\Wordpad_icon-icons.com_55518.png")); // NOI18N
-        jButtonnueva.setText("Nueva");
-        jButtonnueva.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 153)));
+        jMenu7.setBackground(new java.awt.Color(255, 204, 255));
+        jMenu7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jMenu7.setText("Salir");
+        jMenuBar1.add(jMenu7);
 
-        jButtoncancelar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButtoncancelar.setIcon(new javax.swing.ImageIcon("C:\\Users\\agus\\Desktop\\mama\\opciones\\SistemaReservaHotel\\src\\files\\cancelar.png")); // NOI18N
-        jButtoncancelar.setText("Cancelar");
-        jButtoncancelar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 204)));
-
-        jrdactiva.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jrdactiva.setText("Activa");
-        jrdactiva.setBorder(null);
-        jrdactiva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrdactivaActionPerformed(evt);
-            }
-        });
-
-        jrdinactiva.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jrdinactiva.setText("Inactiva");
-        jrdinactiva.setBorder(null);
-        jrdinactiva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrdinactivaActionPerformed(evt);
-            }
-        });
-
-        jrdcancelada.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jrdcancelada.setText("Cancelada");
-        jrdcancelada.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jrdcanceladaActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabelid_reserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelid_hab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelcosto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelobservacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelcant_personas, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                            .addComponent(jLabelegreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelingreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelhuesped, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(79, 79, 79))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jButtonguardar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxhabit, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jComboBox1cantidad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtnombre, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jFormattedTextField1ingreso, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jFormattedTextFieldegreso, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jFormattedTextFieldcosto, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(125, 125, 125))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jrdactiva, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(jrdinactiva)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButtonnueva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(64, 64, 64)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jrdcancelada)
-                            .addComponent(jButtoncancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(64, 64, 64))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelhuesped)
-                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelingreso)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jFormattedTextField1ingreso)
-                        .addGap(1, 1, 1)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabelegreso)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelcant_personas)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelid_hab)
-                            .addComponent(jComboBoxhabit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jFormattedTextFieldegreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jFormattedTextFieldcosto, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabelobservacion)
-                        .addGap(51, 51, 51)
-                        .addComponent(jLabelcosto)))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelid_reserva)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jrdactiva)
-                        .addComponent(jrdinactiva)
-                        .addComponent(jrdcancelada)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtoncancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonnueva)
-                    .addComponent(jButtonguardar))
-                .addGap(15, 15, 15))
-        );
-
-        jLabelreserva.setFont(new java.awt.Font("Stylus BT", 1, 24)); // NOI18N
-        jLabelreserva.setForeground(new java.awt.Color(0, 51, 255));
-        jLabelreserva.setText("SISTEMA DE RESERVAS");
-        jLabelreserva.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addComponent(jLabelreserva, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(120, Short.MAX_VALUE))
+            .addGap(0, 420, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabelreserva, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 276, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jFormattedTextField1ingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ingresoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField1ingresoActionPerformed
-
-    private void jrdactivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrdactivaActionPerformed
-        jrdactiva.setSelected(true);
-        jrdinactiva.setEnabled(false);
-        jrdcancelada.setEnabled(false);
+    private void jRadioButtonMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem1ActionPerformed
         
-    }//GEN-LAST:event_jrdactivaActionPerformed
-
-    private void jrdinactivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrdinactivaActionPerformed
-        jrdactiva.setEnabled(false);
-        jrdinactiva.setSelected(true);
-        jrdcancelada.setEnabled(false);
-    }//GEN-LAST:event_jrdinactivaActionPerformed
-
-    private void jrdcanceladaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrdcanceladaActionPerformed
-        jrdactiva.setEnabled(false);
-        jrdinactiva.setEnabled(false);
-        jrdcancelada.setSelected(true);
-    }//GEN-LAST:event_jrdcanceladaActionPerformed
+    }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,121 +158,26 @@ public class frmprincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new frmprincipal().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new frmprincipal().setVisible(true);
+            }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtoncancelar;
-    private javax.swing.JButton jButtonguardar;
-    private javax.swing.JButton jButtonnueva;
-    private javax.swing.JComboBox<String> jComboBox1cantidad;
-    private javax.swing.JComboBox<String> jComboBoxhabit;
-    private javax.swing.JFormattedTextField jFormattedTextField1ingreso;
-    private javax.swing.JFormattedTextField jFormattedTextFieldcosto;
-    private javax.swing.JFormattedTextField jFormattedTextFieldegreso;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabelcant_personas;
-    private javax.swing.JLabel jLabelcosto;
-    private javax.swing.JLabel jLabelegreso;
-    private javax.swing.JLabel jLabelhuesped;
-    private javax.swing.JLabel jLabelid_hab;
-    private javax.swing.JLabel jLabelid_reserva;
-    private javax.swing.JLabel jLabelingreso;
-    private javax.swing.JLabel jLabelobservacion;
-    private javax.swing.JLabel jLabelreserva;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextAreaobserv;
-    private javax.swing.JRadioButton jrdactiva;
-    private javax.swing.JRadioButton jrdcancelada;
-    private javax.swing.JRadioButton jrdinactiva;
-    private java.awt.TextField textField1;
-    private javax.swing.JTextField txtnombre;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem4;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem5;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem6;
+    private javax.swing.border.MatteBorder matteBorder1;
     // End of variables declaration//GEN-END:variables
-
-    private static class jToggleButtonactivoActionPerformed {
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jToggleButtonactivoActionPerformed() {
-        }
-    }
-
-    private static class jToggleButtoninactivaActionPerformed {
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jToggleButtoninactivaActionPerformed() {
-        }
-    }
-
-    private static class jCheckBoxactivaActionPerformed {
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setEnabled(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jCheckBoxactivaActionPerformed() {
-        }
-    }
-
-    private static class jCheckBoxinactivaActionPerformed {
-
-        private static void setEnabled(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jCheckBoxinactivaActionPerformed() {
-        }
-    }
-
-    private static class jRadioButtonactivaActionPerformed {
-
-        private static void setSeleted(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setEnabled(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jRadioButtonactivaActionPerformed() {
-        }
-    }
-
-    private static class jRadioButtoninactivaActionPerformed {
-
-        private static void setEnabled(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setSeleted(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        private static void setSelected(boolean b) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public jRadioButtoninactivaActionPerformed() {
-        }
-    }
 }
