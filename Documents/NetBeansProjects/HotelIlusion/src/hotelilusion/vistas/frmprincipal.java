@@ -5,6 +5,8 @@
  */
 package hotelilusion.vistas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author agus
@@ -50,6 +52,11 @@ public class frmprincipal extends javax.swing.JFrame {
         jMenu1.setBackground(new java.awt.Color(255, 204, 255));
         jMenu1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu1.setText("Ingresar");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("Acceso");
@@ -66,10 +73,20 @@ public class frmprincipal extends javax.swing.JFrame {
         jMenu2.setBackground(new java.awt.Color(255, 204, 255));
         jMenu2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu2.setText("Reserva");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         jRadioButtonMenuItem4.setSelected(true);
-        jRadioButtonMenuItem4.setText("frmreserva");
+        jRadioButtonMenuItem4.setText("Formulario de Reserva");
         jRadioButtonMenuItem4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jRadioButtonMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jRadioButtonMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -77,9 +94,19 @@ public class frmprincipal extends javax.swing.JFrame {
         jMenu4.setBackground(new java.awt.Color(255, 204, 255));
         jMenu4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu4.setText("Huésped");
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
 
         jRadioButtonMenuItem5.setSelected(true);
-        jRadioButtonMenuItem5.setText("frmhuésped");
+        jRadioButtonMenuItem5.setText("Formulario Huésped");
+        jRadioButtonMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jRadioButtonMenuItem5);
 
         jMenuBar1.add(jMenu4);
@@ -89,8 +116,13 @@ public class frmprincipal extends javax.swing.JFrame {
         jMenu5.setText("Habitación");
 
         jRadioButtonMenuItem6.setSelected(true);
-        jRadioButtonMenuItem6.setText("frmhabitacion");
+        jRadioButtonMenuItem6.setText("Formulario Habitación");
         jRadioButtonMenuItem6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jRadioButtonMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jRadioButtonMenuItem6);
 
         jMenuBar1.add(jMenu5);
@@ -108,6 +140,11 @@ public class frmprincipal extends javax.swing.JFrame {
         jMenu7.setBackground(new java.awt.Color(255, 204, 255));
         jMenu7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu7.setText("Salir");
+        jMenu7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu7ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
@@ -127,8 +164,39 @@ public class frmprincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButtonMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem1ActionPerformed
-        
+        Llamar();
     }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
+
+    private void jRadioButtonMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem4ActionPerformed
+        Llamar2();
+        
+    }//GEN-LAST:event_jRadioButtonMenuItem4ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+        
+                      
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
+        Salir();
+    }//GEN-LAST:event_jMenu7ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jRadioButtonMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem5ActionPerformed
+        Llamar3();
+    }//GEN-LAST:event_jRadioButtonMenuItem5ActionPerformed
+
+    private void jRadioButtonMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem6ActionPerformed
+        Llamar4();
+    }//GEN-LAST:event_jRadioButtonMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,22 +214,16 @@ public class frmprincipal extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(frmprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmprincipal().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new frmprincipal().setVisible(true);
         });
     }
 
@@ -180,4 +242,30 @@ public class frmprincipal extends javax.swing.JFrame {
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem6;
     private javax.swing.border.MatteBorder matteBorder1;
     // End of variables declaration//GEN-END:variables
+
+    private void Llamar(){
+        JOptionPane.showMessageDialog(null, "Ha seleccionado el portal de acceso");
+        new frmacceso().setVisible(true);
+            }
+    
+    private void Llamar2() {
+        JOptionPane.showMessageDialog(null, "Ha seleccionado el Formulario de Reserva");
+        new frmreserva().setVisible(true);
+    }
+
+    
+    private void Salir() {
+        JOptionPane.showMessageDialog(null, "¿Esta seguro que desea salir del sistema?");
+        System.exit(1);
+    }
+    
+    private void Llamar3() {
+        JOptionPane.showMessageDialog(null, "Ha seleccionado el Formulario Huésped");
+        new frmhuesped().setVisible(true);
+    }
+    
+    private void Llamar4() {
+        JOptionPane.showMessageDialog(null, "Ha seleccionado el Formulario Habitación");
+        new frmhabitacion().setVisible(true);
+    }
 }
