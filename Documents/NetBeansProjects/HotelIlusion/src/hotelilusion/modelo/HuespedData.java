@@ -90,4 +90,64 @@ public class HuespedData {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    
+    public void actualizarHuesped(Huesped huesped){
+        try {            
+            String sql = "UPDATE huesped SET dni = ?, nombre = ? , activo =? WHERE idCliente = ?;";
+            PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);            
+            statement.setInt(1, huesped.getInt("id_huesped"));
+            statement.setString(2, huesped.getString("nombre_apellido"));    
+            huesped.setNumero_documento(resultSet.getInt("numero_documento"));
+            huesped.setDireccion(resultSet.getString("direccion"));
+            huesped.setTelefono(resultSet.getInt("telefono"));
+            huesped.setEmail(resultSet.getString("email"));            
+            statement.executeUpdate();                      
+            statement.close();    
+        } 
+        catch (SQLException ex){
+            System.out.println("Error al insertar un huésped: " + ex.getMessage());
+        }    
+    }
+    
+    public Huesped buscarHuesped(int id){
+      Huesped huesped = null;
+        try{            
+            String sql = "SELECT * FROM huesped WHERE id_huesped =?;";
+          try (PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+              statement.setInt(1, id);
+              ResultSet resultSet=statement.executeQuery();
+              
+              while(resultSet.next()){
+                  huesped = new Huesped();
+                  huesped.setId_huesped(resultSet.getInt("id_huesped"));
+                  huesped.setNombre_apellido(resultSet.getString("nombre_apellido"));
+                  huesped.setNumero_documento(resultSet.getInt("numero_documento"));
+                  huesped.setDireccion(resultSet.getString("direccion"));
+                  huesped.setTelefono(resultSet.getInt("telefono"));
+                  huesped.setEmail(resultSet.getString("email"));
+              }
+          }              
+        }catch (SQLException ex){
+            System.out.println("Error al insertar un huesped: " + ex.getMessage());
+        }        
+        return huesped;
+    }
+
+    private static class resultSet {
+
+        private static int getInt(String numero_documento) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private static String getString(String direccion) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public resultSet() {
+        }
+    }
+    
+    
 }
+
+
