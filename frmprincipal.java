@@ -49,6 +49,7 @@ public class frmprincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setName("Principal"); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${iconImage.source}"), this, org.jdesktop.beansbinding.BeanProperty.create("iconImage"));
         bindingGroup.addBinding(binding);
@@ -138,10 +139,10 @@ public class frmprincipal extends javax.swing.JFrame {
 
         jMenu6.setBackground(new java.awt.Color(255, 204, 255));
         jMenu6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jMenu6.setText("Consultas");
+        jMenu6.setText("  Archivos");
 
         jRadioButtonMenuItem2consulta.setSelected(true);
-        jRadioButtonMenuItem2consulta.setText("Formulario de Consulta");
+        jRadioButtonMenuItem2consulta.setText("Abrir archivo");
         jRadioButtonMenuItem2consulta.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.pink, null));
         jRadioButtonMenuItem2consulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,7 +256,7 @@ public class frmprincipal extends javax.swing.JFrame {
 
     private void jRadioButtonMenuItem2salidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem2salidaActionPerformed
         // TODO add your handling code here:
-        Salir();
+        System.exit(0);
     }//GEN-LAST:event_jRadioButtonMenuItem2salidaActionPerformed
 
     
@@ -338,8 +339,8 @@ public class frmprincipal extends javax.swing.JFrame {
     }
     
     private void Llamar5() {
-        JOptionPane.showMessageDialog(null, "Ha seleccionado el Formulario de Consulta");
-        new frmconsultas().setVisible(true);
+        JOptionPane.showMessageDialog(null, "Ha seleccionado buscar un archivo");
+        new frmabrir().setVisible(true);
     }
     
     private void Llamar6() {
